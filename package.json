@@ -1,0 +1,42 @@
+{
+  "name": "boohoo-appium-cloud-typescript-lambdatest",
+  "version": "0.1.0",
+  "description": "Project to run WebdriverIO tests with Appium to test the boohoo native applications on iOS and Android",
+  "scripts": {
+    "lint": "eslint . --ext .ts",
+    "clean": "rm -rf dist && rm -rf screenshots/",
+    "clean:reruns": "rm -rf ./rerun.sh && rm -rf ./re-runs",
+    "clean:all": "npm run clean; npm run clean:reruns",
+    "build": "tsc",
+    "rerun": "bash ./rerun.sh",
+    "test:boohoo:android": "wdio run ./config/wdio.lt.android.conf.ts"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@types/jasmine": "^3.7.4",
+    "@types/node": "^17.0.14",
+    "@types/node-fetch": "^2.5.10",
+    "@types/oracledb": "^5.2.3",
+    "@typescript-eslint/eslint-plugin": "^4.26.1",
+    "@typescript-eslint/parser": "^4.26.1",
+    "@wdio/appium-service": "^6.12.1",
+    "@wdio/browserstack-service": "^6.12.1",
+    "@wdio/cli": "^6.12.1",
+    "@wdio/jasmine-framework": "^6.11.0",
+    "@wdio/local-runner": "^6.12.1",
+    "@wdio/spec-reporter": "^6.11.0",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.28.0",
+    "eslint-config-standard": "^16.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-wdio": "^6.6.0",
+    "jimp": "^0.16.1",
+    "node-fetch": "^2.6.1",
+    "oracledb": "^5.4.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2",
+    "wdio-lambdatest-service": "^1.0.8"
+  }
+}
